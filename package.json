@@ -1,5 +1,5 @@
 {
-  "name": "ng-var-directive-issue",
+  "name": "my-var-directive-issue",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

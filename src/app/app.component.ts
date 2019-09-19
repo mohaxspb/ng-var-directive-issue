@@ -3,14 +3,14 @@ import {Component, Directive, Input, TemplateRef, ViewContainerRef} from '@angul
 @Component({
   selector: 'app-root',
   template:
-    '<div *ngVar="title as ngVarTitle">' +
-    '<h3>{{ngVarTitle}}</h3>' +
-    '<button (click)="ngVarTitle=changedTitle">click me!</button>' +
+    '<div *myVar="title as myVarTitle">' +
+    '<h3>{{myVarTitle}}</h3>' +
+    '<button (click)="myVarTitle=changedTitle">click me!</button>' +
     '</div>'
 })
 export class AppComponent {
   // noinspection JSUnusedGlobalSymbols
-  title = 'ng-var-directive-issue';
+  title = 'my-var-directive-issue';
   // noinspection JSUnusedGlobalSymbols
   changedTitle = 'Title changed!';
 }
@@ -20,12 +20,12 @@ export class AppComponent {
  */
 @Directive({
   // tslint:disable-next-line:directive-selector
-  selector: '[ngVar]',
+  selector: '[myVar]',
 })
 export class VarDirective {
   @Input()
-  set ngVar(context: any) {
-    this.context.$implicit = this.context.ngVar = context;
+  set myVar(context: any) {
+    this.context.$implicit = this.context.myVar = context;
     this.updateView();
   }
 

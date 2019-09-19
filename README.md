@@ -1,4 +1,4 @@
-# NgVarDirectiveIssue
+# MyVarDirectiveIssue
 
 This repository demonstrates error while try to `ng build --prod` if there is `ReadVarExpr` in template.
 
